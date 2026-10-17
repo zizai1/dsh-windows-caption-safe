@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Windows caption safe area",
+    "description": "Keeps overlays clear of the native Windows window controls: publishes one safe-area height and realigns surfaces that sit under it, such as the image preview and Univer floating windows."
+  }
+}

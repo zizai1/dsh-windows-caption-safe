@@ -1,0 +1,61 @@
+{
+  "name": "dsh-windows-caption-safe",
+  "version": "2.0.0",
+  "description": "Windows 标题栏安全区通用对齐引擎: 把任何被原生最小化/最大化/关闭按钮压住的浮层下移到安全区以下。内置图片预览与 dsh-univer-office 浮窗两条规则，可被其他插件复用。 | A generic Windows caption safe-area engine: lifts any overlay out from under the native window controls. Ships rules for the image lightbox and dsh-univer-office floating windows, and is reusable by other plugins.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek-harness-plugin",
+    "cordis",
+    "windows",
+    "titlebar",
+    "title-bar",
+    "caption",
+    "safe-area",
+    "window-controls-overlay",
+    "wco",
+    "lightbox",
+    "univer"
+  ],
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "README.md"
+  ],
+  "meta": {
+    "title": "Windows 标题栏安全区",
+    "description": "让浮层避开 Windows 原生窗口按钮：统一发布安全区高度，并对图片预览、Univer 浮窗等被压住的界面做自动对齐。"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-attachment"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.0-rc <5"
+  },
+  "engines": {
+    "node": "^22.15.0 || >=24.0.0"
+  },
+  "scripts": {
+    "check": "node --check lib/index.js && node --check lib/client.js"
+  }
+}

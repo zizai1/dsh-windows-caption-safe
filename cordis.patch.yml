@@ -1,0 +1,5 @@
+# dsh-windows-caption-safe bundle layer: insert the caption safe-area engine row.
+- insert:
+    - id: dsh-windows-caption-safe
+      name: 'dsh-windows-caption-safe'
+      config: {}

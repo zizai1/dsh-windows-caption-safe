@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Windows 标题栏安全区",
+    "description": "让浮层避开 Windows 原生窗口按钮：统一发布安全区高度，并对图片预览、Univer 浮窗等被压住的界面做自动对齐。"
+  }
+}
